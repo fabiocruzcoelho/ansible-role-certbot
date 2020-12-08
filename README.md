@@ -1,8 +1,8 @@
 <h1 align="center">Welcome to role certbot 👋</h1>
 <p>
-  <a href="https://github.com/fabiocruzcoelho/ansible-role-certbot/actions?query=workflow%3ARelease">
-  <img alt="CI" src="https://github.com/fabiocruzcoelho/ansible-role-certbot/workflows/Release/badge.svg?event=push" /></a>
-  <a href="https://gitlab.com/estudosdevops/ansible/roles/certbot/-/commits/master"><img alt="pipeline status" src="https://gitlab.com/estudosdevops/ansible/roles/certbot/badges/master/pipeline.svg" /></a>
+  <img alt="CI" src="https://github.com/fabiocruzcoelho/ansible-role-certbot/workflows/CI/badge.svg?event=push"
+  <a href="https://github.com/fabiocruzcoelho/ansible-role-certbot/actions?query=workflow%3ACI"
+   <a href="https://gitlab.com/estudosdevops/ansible/roles/certbot/-/commits/master"><img alt="pipeline status" src="https://gitlab.com/estudosdevops/ansible/roles/certbot/badges/master/pipeline.svg" /></a>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://gitlab.com/estudosdevops/ansible/roles/certbot/-/blob/master/README.md" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
