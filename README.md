@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> Installs and configures Certbot (for Let's Encrypt with nginx and cloudflare_dns).
+> Installs and configures Certbot (for Let's Encrypt with nginx and cloudflare_dns). This role was developed based on [ansible-role-certbot](https://galaxy.ansible.com/geerlingguy/certbot) from geerlingguy.
 
 ## Install
 
@@ -71,11 +71,11 @@ Available variables are along with default values see: [defaults/main.yml](https
 
 > Dependence
 
- Creating API tokens Cloudflare
+Creating API tokens Cloudflare
 
- - [cloudflare-api-token](https://support.cloudflare.com/hc/pt-br/articles/200167836-Gerenciamento-de-tokens-e-chaves-da-API)
+- [cloudflare-api-token](https://support.cloudflare.com/hc/pt-br/articles/200167836-Gerenciamento-de-tokens-e-chaves-da-API)
 
- Ansible role Tester
+Ansible role Tester
 
 - [ansible-role-tester](https://github.com/fubarhouse/ansible-role-tester)
 
