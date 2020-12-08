@@ -1,0 +1,27 @@
+---
+- name: Lint it
+  hosts: all
+  gather_facts: yes
+  become: yes
+  vars:
+    certbot_letsencrypt_create_if_missing: true
+    zone: example.com
+    email: janedoe@example.com
+    token: 72d9c6c562bd8084509de315d37d6124636
+
+  tasks:
+    - name: Lint role certbot
+      include_role:
+        name: certbot
+      vars:
+        certbot_cloudflare_dns_zone: "{{ zone }}"
+        certbot_cloudflare_dns_api_token: "{{ token }}"
+        certbot_cloudflare_dns_email: "{{ email }}"
+        certbot_cloudflare_dns_value_ip: "200.200.200.1"
+        certbot_cloudflare_dns_record:
+          - "*"
+          - example.com
+        certbot_certs:
+          - domains:
+              - "*.example.com"
+              - example.com

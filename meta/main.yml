@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  role_name: certbot
+  author: Fabio Coelho
+  description: "Installs and configures Certbot (for Let's Encrypt with nginx and cloudflare_dns)."
+  company: GPiT Consultoria
+
+  license: license (BSD, MIT)
+
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+        - focal
+
+  galaxy_tags:
+    - certbot
+    - letsencrypt
+    - cloudflare
+    - nginx
+
+dependencies: []

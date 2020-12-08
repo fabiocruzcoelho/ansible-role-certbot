@@ -1,0 +1,29 @@
+---
+# Parameters used when creating new Certbot certs and cloudflare_dns.
+certbot_cloudflare_dns_zone: example.com
+certbot_cloudflare_dns_api_token: 72d9c6c562bd8084509de315d37d612463
+certbot_cloudflare_dns_credentials: /etc/letsencrypt/cloudflareapi.cfg
+certbot_cloudflare_dns_email: email@example.com
+certbot_letsencrypt_certname: telemetry
+certbot_letsencrypt_acme: https://acme-staging-v02.api.letsencrypt.org/directory
+certbot_letsencrypt_create_if_missing: false
+certbot_letsencrypt_certs: []
+# - email: janedoe@example.com
+#   domains:
+#     - example1.com
+#     - example2.com
+# - domains:
+#     - example3.com
+certbot_command: >-
+  certbot certonly --cert-name {{ certbot_letsencrypt_certname }} --noninteractive --agree-tos
+  --email {{ cert_item.email | default(certbot_cloudflare_dns_email) }}
+  --dns-cloudflare --dns-cloudflare-credentials {{ certbot_cloudflare_dns_credentials }}
+  --server {{ certbot_letsencrypt_acme }} -d {{ cert_item.domains | join(',') }}
+  --dns-cloudflare-propagation-seconds 60
+
+# Set options cloudflare_dns.
+certbot_cloudflare_dns_state: present
+certbot_cloudflare_dns_value_ip: 127.0.0.1
+
+# A list of dns name who will be added to the cloudflare.
+certbot_cloudflare_dns_record: []

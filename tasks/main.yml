@@ -1,0 +1,15 @@
+---
+- include_tasks: setup-Debian.yml
+  when: ansible_os_family == 'Debian'
+
+- include_tasks: cloudflare-dns.yml
+  when:
+    - certbot_letsencrypt_create_if_missing
+    - certbot_cloudflare_dns_record | length > 0
+
+- include_tasks: letsencrypt-certs.yml
+  loop: "{{ certbot_certs }}"
+  when:
+    - certbot_letsencrypt_create_if_missing
+  loop_control:
+    loop_var: cert_item

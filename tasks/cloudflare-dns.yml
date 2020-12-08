@@ -1,0 +1,20 @@
+---
+- name: Copy cloudflare credentials
+  template:
+    src: cloudflareapi.cfg.j2
+    dest: "{{ certbot_cloudflare_dns_credentials }}"
+    owner: root
+    group: root
+    backup: yes
+
+- name: Ensure type A record added to the cloudflare.
+  cloudflare_dns:
+    zone: "{{ certbot_cloudflare_dns_zone }}"
+    record: "{{ item }}"
+    type: A
+    value: "{{ certbot_cloudflare_dns_value_ip }}"
+    account_email: "{{ certbot_cloudflare_dns_email }}"
+    account_api_token: "{{ certbot_cloudflare_dns_api_token }}"
+    state: "{{ certbot_cloudflare_dns_state }}"
+  register: record
+  loop: "{{ certbot_cloudflare_dns_record }}"

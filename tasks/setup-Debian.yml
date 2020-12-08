@@ -1,0 +1,7 @@
+---
+- name: (Debian) Install dependencies.
+  apt:
+    pkg:
+      - python3-certbot-nginx
+      - python3-cloudflare
+      - python3-certbot-dns-cloudflare
