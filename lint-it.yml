@@ -7,7 +7,7 @@
     certbot_letsencrypt_create_if_missing: true
     zone: example.com
     email: janedoe@example.com
-    token: 72d9c6c562bd8084509de315d37d6124636
+    token:
 
   tasks:
     - name: Lint role certbot

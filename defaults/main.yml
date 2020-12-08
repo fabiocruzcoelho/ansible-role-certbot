@@ -1,7 +1,7 @@
 ---
 # Parameters used when creating new Certbot certs and cloudflare_dns.
 certbot_cloudflare_dns_zone: example.com
-certbot_cloudflare_dns_api_token: 72d9c6c562bd8084509de315d37d612463
+certbot_cloudflare_dns_api_token: ''
 certbot_cloudflare_dns_credentials: /etc/letsencrypt/cloudflareapi.cfg
 certbot_cloudflare_dns_email: email@example.com
 certbot_letsencrypt_certname: example
