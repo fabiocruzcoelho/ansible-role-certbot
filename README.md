@@ -45,7 +45,7 @@ Available variables are along with default values see: [defaults/main.yml](https
   vars:
     certbot_letsencrypt_create_if_missing: true
     zone: example.com
-    email: janedoe@example.com
+    email: fabio@example.com
     token: 72d9c6c562bd8084509de315d37d6124636
 
   tasks:
@@ -70,7 +70,11 @@ Available variables are along with default values see: [defaults/main.yml](https
 
 > Dependence
 
-- [cloudflare-api-token](https://support.cloudflare.com/hc/pt-br/articles/200167836-Gerenciamento-de-tokens-e-chaves-da-API)
+ Creating API tokens Cloudflare
+
+ - [cloudflare-api-token](https://support.cloudflare.com/hc/pt-br/articles/200167836-Gerenciamento-de-tokens-e-chaves-da-API)
+
+ Ansible role Tester
 
 - [ansible-role-tester](https://github.com/fubarhouse/ansible-role-tester)
 
