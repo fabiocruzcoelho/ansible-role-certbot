@@ -44,8 +44,6 @@ Available variables are along with default values see: [defaults/main.yml](https
   gather_facts: yes
   become: yes
   vars:
-    certbot_cloudflare_create_if_missing: true
-    certbot_letsencrypt_create_if_missing: true
     zone: example.com
     email: fabio@example.com
     token: 72d9c6c562bd8084509de315d37d6124636
@@ -55,6 +53,8 @@ Available variables are along with default values see: [defaults/main.yml](https
       include_role:
         name: certbot
       vars:
+        certbot_cloudflare_create_if_missing: true
+        certbot_letsencrypt_create_if_missing: true
         certbot_cloudflare_dns_zone: "{{ zone }}"
         certbot_cloudflare_dns_api_token: "{{ token }}"
         certbot_cloudflare_dns_email: "{{ email }}"
