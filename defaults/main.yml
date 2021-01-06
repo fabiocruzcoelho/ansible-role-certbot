@@ -4,6 +4,7 @@ certbot_cloudflare_dns_zone: example.com
 certbot_cloudflare_dns_api_token: ''
 certbot_cloudflare_dns_credentials: /etc/letsencrypt/cloudflareapi.cfg
 certbot_cloudflare_dns_email: email@example.com
+certbot_cloudflare_create_if_missing: false
 certbot_letsencrypt_certname: example
 certbot_letsencrypt_acme: https://acme-staging-v02.api.letsencrypt.org/directory
 certbot_letsencrypt_create_if_missing: false

@@ -4,6 +4,7 @@
   gather_facts: yes
   become: yes
   vars:
+    certbot_cloudflare_create_if_missing: true
     certbot_letsencrypt_create_if_missing: true
     zone: example.com
     email: janedoe@example.com

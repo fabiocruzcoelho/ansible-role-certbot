@@ -4,7 +4,7 @@
 
 - include_tasks: cloudflare-dns.yml
   when:
-    - certbot_letsencrypt_create_if_missing
+    - certbot_cloudflare_create_if_missing
     - certbot_cloudflare_dns_record | length > 0
 
 - include_tasks: letsencrypt-certs.yml
